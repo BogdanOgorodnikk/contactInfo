@@ -20,10 +20,10 @@
             </div>
             <div class="contact-info-table__box-body" v-for="(value,name) in contact" :key="value.id">
                 <div class="contact-info-table__item-body">
-                    {{name}}
+                    <span class="contact-info-table__item-body--span">Название поля: </span>{{name}}
                 </div>
                 <div class="contact-info-table__item-body">
-                    {{value}}
+                    <span class="contact-info-table__item-body--span">Значение: </span>{{value}}
                 </div>
                 <div class="contact-info-table__item-body edit" @click.prevent="showEditLine(name, value)">
                     Редактировать
@@ -189,6 +189,7 @@ export default {
         font-size: 16px;
         padding: 5px;
         text-align: center;
+        overflow: hidden;
     }
     .contact-info-table__box-body {
         display: flex;
@@ -199,5 +200,27 @@ export default {
         font-weight: 400;
         font-size: 16px;
         padding: 5px;
+        overflow: hidden;
     }
+    .contact-info-table__item-body--span {
+        font-weight: 700;
+        font-size: 16px;
+        display: none;
+    }
+@media screen and (max-width: 500px) {
+    .contact-info-table__box-head {
+        display: none;
+    }
+    .contact-info-table__box-body {
+        display: block;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .contact-info-table__item-body--span {
+        display: inline-block;
+        padding-right: 5px;
+    }
+}
 </style>

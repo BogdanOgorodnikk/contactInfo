@@ -137,4 +137,19 @@ export default {
         width: 98%;
         margin-top: 10px;
     }
+@media screen and (max-width: 770px) {
+    .edit-contact-line__box {
+        left: 16%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .edit-contact-line__box {
+        left: 0%;
+    }
+}
+@media screen and (max-width: 236px) {
+    .edit-contact-line__box {
+        height: 270px;
+    }
+}
 </style>

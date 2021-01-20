@@ -84,4 +84,11 @@ export default {
         font-weight: 400;
         cursor: pointer;
     }
+@media screen and (max-width: 533px) {
+    .create-contact-info__form--input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
 </style>

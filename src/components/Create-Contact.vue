@@ -75,4 +75,15 @@ export default {
         margin-left: 15px;
         cursor: pointer;
     }
+@media screen and (max-width: 500px) {
+    .create-contact__form--input {
+        display: block;
+        width: 100%;
+    }
+    .create-contact__form--button {
+        display: block;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+}
 </style>
